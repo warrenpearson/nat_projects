@@ -1,0 +1,49 @@
+[tool.briefcase]
+project_name = "Buttons"
+bundle = "com.p34r50n"
+version = "0.0.1"
+url = "https://p34r50n.com/buttons"
+license = "BSD license"
+author = 'Warren Pearson'
+author_email = "warren@p34r50n.com"
+
+[tool.briefcase.app.buttons]
+formal_name = "Buttons"
+description = "Buttons App"
+icon = "src/buttons/resources/buttons"
+sources = ['src/buttons']
+requires = []
+
+
+[tool.briefcase.app.buttons.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.buttons.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.buttons.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.buttons.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.buttons.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]
